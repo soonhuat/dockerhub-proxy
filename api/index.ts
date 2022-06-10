@@ -7,7 +7,7 @@ export interface ResponseResult {
   name?: string
   lastUpdated?: string
   tagStatus?: boolean
-  disgest?: string
+  digest?: string
 }
 
 export interface DockerHubResponse {
@@ -32,7 +32,7 @@ async function CheckDockerContainer(
         name: response.data.name,
         lastUpdated: response.data.last_updated,
         tagStatus: response.data.tag_status,
-        disgest: response.data.disgest
+        digest: response.data?.images?.[0]?.digest
       }
       return {
         status: 'success',
