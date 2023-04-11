@@ -16,7 +16,7 @@ export interface DockerHubResponse {
   result?: ResponseResult
 }
 
-async function CheckDockerContainer(
+export async function CheckDockerContainer(
   image: string,
   tag: string
 ): Promise<DockerHubResponse> {

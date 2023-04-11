@@ -1,13 +1,19 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable", "es2017", "es6", "esnext"],
     "strict": true,
     "noEmit": true,
-    "module": "esnext",
+    "module": "commonjs",
+    "esModuleInterop": true,
     "moduleResolution": "node",
-    "isolatedModules": true
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist/",
+    "rootDir": "./",
+    "sourceMap": true,
+    "typeRoots": ["node_modules/@types"]
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "./src/**/*"]
 }
